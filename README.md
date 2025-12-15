@@ -74,3 +74,36 @@ Interactive documentation is available at: [http://127.0.0.1:8000/api/documentat
 | PUT    | /api/users/{id}           | Update user details                                 |
 | DELETE | /api/users/{id}           | Soft delete a user                                  |
 | POST   | /api/users/bulk-delete    | Bulk delete users (Requires array of IDs)           |
+
+## 4. Assumptions & Design Choices
+
+### A. Separation of Concerns (Web vs API)
+- **App\Http\Controllers\UserController**: Handles Web requests (Views/Redirects).  
+- **App\Http\Controllers\Api\UserController**: Handles API requests (JSON responses).
+
+### B. Smart Validation Handling
+- Custom Form Requests (`StoreUserRequest`, `UpdateUserRequest`) handle validation centrally.  
+- `failedValidation` is overridden to detect request context:
+  - **Browser:** redirects back with errors (user-friendly).  
+  - **API:** returns JSON errors (machine-friendly).
+
+### C. Route Naming Convention
+- API routes are explicitly named using `->names('api.users')` to avoid conflicts between Web and API routes.
+
+### D. Data Integrity (Soft Deletes)
+- Users are **soft deleted** using Laravel’s `SoftDeletes` trait.  
+- Deleted users are hidden from the frontend but remain in the database with a `deleted_at` timestamp.
+
+### E. Testing Strategy
+- Unit and Feature tests implemented with **PHPUnit**.  
+- `UserTest.php` covers the critical CRUD operations: list, create, update, and soft delete.
+
+---
+
+## Technologies Used
+- **Framework:** Laravel 11  
+- **Database:** MySQL  
+- **Frontend:** Blade Templates + Bootstrap  
+- **API Documentation:** L5-Swagger  
+- **Export:** Maatwebsite/Laravel-Excel
+
