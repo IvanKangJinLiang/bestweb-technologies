@@ -64,7 +64,7 @@ php artisan serve
 ## 3. API Endpoints Documentation
 
 The API is fully documented using Swagger/OpenAPI.  
-Interactive documentation is available at: [http://127.0.0.1:8000/api/documentation](http://127.0.0.1:8000/api/documentation)
+Interactive documentation is available at: [http://127.0.0.1:8000/api/documentation](http://127.0.0.1:8000/api/documentation) [Make sure php artisan serve is running]
 
 | Method | Endpoint                  | Description                                         |
 |--------|---------------------------|-----------------------------------------------------|
