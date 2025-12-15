@@ -45,12 +45,32 @@ cp .env.example .env
 ```bash
 php artisan key:generate
 ```
+
 ### 2.5 Run database migrations
 ```bash
 php artisan migrate
 ```
 
-### 2.6 Start the development server
+### 2.6 Generate API documentation
+```bash
+php artisan l5-swagger:generate
+```
+
+### 2.7 Start the development server
 ```bash
 php artisan serve
 ```
+
+## 3. API Endpoints Documentation
+
+The API is fully documented using Swagger/OpenAPI.  
+Interactive documentation is available at: [http://127.0.0.1:8000/api/documentation](http://127.0.0.1:8000/api/documentation)
+
+| Method | Endpoint                  | Description                                         |
+|--------|---------------------------|-----------------------------------------------------|
+| GET    | /api/users                | List users (Supports pagination & status filtering) |
+| POST   | /api/users                | Create a new user                                   |
+| GET    | /api/users/{id}           | Get details of a specific user                      |
+| PUT    | /api/users/{id}           | Update user details                                 |
+| DELETE | /api/users/{id}           | Soft delete a user                                  |
+| POST   | /api/users/bulk-delete    | Bulk delete users (Requires array of IDs)           |
