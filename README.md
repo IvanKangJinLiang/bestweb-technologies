@@ -36,7 +36,7 @@ npm install
 npm run build
 ```
 
-### 2.3 Set up your environment file
+### 2.3 Set up environment file
 ```bash
 cp .env.example .env
 ```
