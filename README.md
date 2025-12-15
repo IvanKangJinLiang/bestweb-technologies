@@ -24,8 +24,8 @@ Before setting up the project locally, make sure you have the following installe
 ## 2. Installation Steps
 
 ### 2.1 Clone the repository
-```bash
 git clone https://github.com/IvanKangJinLiang/bestweb-technologies.git
+```bash
 cd bestweb-technologies
 ```
 
