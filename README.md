@@ -41,7 +41,7 @@ npm run build
 cp .env.example .env
 ```
 
-### 2.4 Set up your environment file
+### 2.4 Generate the application key
 ```bash
 php artisan key:generate
 ```
