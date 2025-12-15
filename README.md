@@ -21,3 +21,9 @@ git clone https://github.com/IvanKangJinLiang/bestweb-technologies.git
 cd bestweb-technologies
 composer install
 npm install && npm run build
+
+**2. Environment Configuration**
+cp .env.example .env
+php artisan key:generate
+
+php artisan migrate
