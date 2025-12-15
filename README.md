@@ -17,6 +17,7 @@ Follow these steps to get the project running on your local machine.
 
 **1. Clone and Install Dependencies**
 git clone https://github.com/IvanKangJinLiang/bestweb-technologies.git
+
 cd bestweb-technologies
 composer install
 npm install && npm run build
