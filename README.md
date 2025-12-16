@@ -24,8 +24,8 @@ Before setting up the project locally, make sure you have the following installe
 ## 2. Installation Steps
 
 ### 2.1 Clone the repository
-git clone https://github.com/IvanKangJinLiang/bestweb-technologies.git
 ```bash
+git clone https://github.com/IvanKangJinLiang/bestweb-technologies.git
 cd bestweb-technologies
 ```
 
@@ -41,25 +41,23 @@ npm run build
 cp .env.example .env
 ```
 
-### 2.4 Generate the application key
+### 2.4 Generate the application key & Run database migrations
+Ensure you create a database in your MySQL server (e.g., via phpMyAdmin) that matches the DB_DATABASE value in your .env file (Default: bestweb_technologies)
 ```bash
 php artisan key:generate
+php artisan migrate --seed
 ```
 
-### 2.5 Run database migrations
-```bash
-php artisan migrate
-```
-
-### 2.6 Generate API documentation
+### 2.5 Generate API documentation
 ```bash
 php artisan l5-swagger:generate
 ```
 
-### 2.7 Start the development server
+### 2.6 Start the development server
 ```bash
 php artisan serve
 ```
+Access the application at: http://127.0.0.1:8000
 
 ## 3. API Endpoints Documentation
 
@@ -75,7 +73,14 @@ Interactive documentation is available at: [http://127.0.0.1:8000/api/documentat
 | DELETE | /api/users/{id}           | Soft delete a user                                  |
 | POST   | /api/users/bulk-delete    | Bulk delete users (Requires array of IDs)           |
 
-## 4. Assumptions & Design Choices
+
+## 4. Running Tests:
+The application includes Feature tests covering CRUD operations.
+```bash
+php artisan test
+```
+
+## 5. Assumptions & Design Choices
 
 ### A. Separation of Concerns (Web vs API)
 - **App\Http\Controllers\UserController**: Handles Web requests (Views/Redirects).  

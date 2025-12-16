@@ -15,11 +15,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
+        //Create a known Test User 
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+            'phone_number' => '01010101010', 
+            'status' => 'active',
         ]);
+
+        //To test Pagination, since controller paginates at 10 per page, create 15 more users
+        User::factory(15)->create();
     }
 }
