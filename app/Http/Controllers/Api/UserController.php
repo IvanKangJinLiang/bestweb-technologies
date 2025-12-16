@@ -44,10 +44,10 @@ class UserController extends Controller
      * required=true,
      * @OA\JsonContent(
      * required={"name","email","phone_number","password","status"},
-     * @OA\Property(property="name", type="string", example="John Doe"),
-     * @OA\Property(property="email", type="string", format="email", example="john@test.com"),
+     * @OA\Property(property="name", type="string", example="Testing User"),
+     * @OA\Property(property="email", type="string", format="email", example="testinguser@gmail.com"),
      * @OA\Property(property="phone_number", type="string", example="0123456789"),
-     * @OA\Property(property="password", type="string", format="password", example="secret123"),
+     * @OA\Property(property="password", type="string", format="password", example="12345678"),
      * @OA\Property(property="status", type="string", example="active")
      * )
      * ),
@@ -97,8 +97,8 @@ class UserController extends Controller
      * @OA\RequestBody(
      * required=true,
      * @OA\JsonContent(
-     * @OA\Property(property="name", type="string", example="Jane Doe"),
-     * @OA\Property(property="email", type="string", example="jane@test.com"),
+     * @OA\Property(property="name", type="string", example="User Testing"),
+     * @OA\Property(property="email", type="string", example="userTesting@gmail.com"),
      * @OA\Property(property="phone_number", type="string", example="0987654321"),
      * @OA\Property(property="status", type="string", example="inactive")
      * )
