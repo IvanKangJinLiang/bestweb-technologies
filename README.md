@@ -17,7 +17,6 @@ Before setting up the project locally, make sure you have the following installe
 - **Composer**
 - **Node.js** & **NPM**
 - **MySQL** (or any database supported by Laravel)
-- Optional: **Redis** or **Memcached** if you want caching support
 
 ---
 
