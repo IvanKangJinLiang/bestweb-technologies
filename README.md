@@ -2,11 +2,9 @@
 
 ## Project Overview
 This is a complete User Management System developed with **Laravel 11**. It features:  
-- A full **Admin Dashboard** for managing web users  
+- An **Admin Dashboard** for managing web users  
 - A **RESTful API** for external integration  
 - Focus on **code quality, security, and testability**  
-
-This project is suitable for learning, testing, or extending a robust Laravel application.
 
 ---
 
