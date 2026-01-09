@@ -15,15 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable(); // Default Laravel column, keep it if you want
+            $table->timestamp('email_verified_at')->nullable(); 
             $table->string('password');
-            
-            // --- Add your custom columns here ---
             $table->string('phone_number')->unique();
             $table->string('status')->default('active');
             $table->softDeletes(); 
-            // ------------------------------------
-
             $table->rememberToken();
             $table->timestamps();
         });
